@@ -10,9 +10,9 @@ The main contents of this repository are as follows.
 
 [compare_vqe_variants.py](compare_vqe_variants.py) compares different variants of the VQE with and without warm-starts based on ACAE with different optimizer settings as further explained in our paper [1]. It contains functions to run these variants for multiple problem instances, store information on the progress of each variant, and evaluate these results.
 
-In [utils](utils) provides functionalities to generate the problem instances, obtain approximate solutions by means of the inverse power method, handle the storage of results, and a wrapper for the optimizer.
+[utils](utils) provides functionalities to generate the problem instances, obtain approximate solutions by means of the inverse power method, handle the storage of results, and a wrapper for the optimizer.
 
-In [results](results) contains the results generated with the implementation and presented in the publication. The evaluation is done with the appropriate function provided in [compare_vqe_variants.py](compare_vqe_variants.py).
+[results](results) contains the results generated with the implementation and presented in the publication. The evaluation is done with the appropriate function provided in [compare_vqe_variants.py](compare_vqe_variants.py).
 
 ### References
 [1] Truger, Felix, et al. "Warm-Starting the VQE with Approximate Complex Amplitude Encoding" (in preparation)
