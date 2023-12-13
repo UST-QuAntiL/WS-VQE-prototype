@@ -169,7 +169,8 @@ def run_comparison(a_seed=a_seed, plot=False):
     return operator_matrix, ref_value, ref_eigenstate, approx_eigenstate_amplitudes, approx_ratio, variants
 
 def run_vqe(circuit_ansatz, pauli_operator, optimizer, initial_params=[0 for i in range(num_parameters)], initial_point=None, shots=n_shots):
-    # execute VQE according to the configuration provided (including initial state/parameter initialization for optional warm-starting)
+    """Execute VQE according to the configuration provided (including initial state/parameter initialization for optional warm-starting)"""
+
     circuit = QuantumCircuit(problem_size)
     if initial_point is not None:
         circuit.initialize(initial_point, circuit.qubits)
@@ -190,7 +191,8 @@ def run_vqe(circuit_ansatz, pauli_operator, optimizer, initial_params=[0 for i i
     return (counts, values), result
 
 def eval_energy(state, operator):
-    # uses qiskit#s VQE implementation to evaluate the expectation value of an operator for a given state
+    """Uses qiskit's VQE implementation to evaluate the expectation value of an operator for a given state."""
+
     # first generate a (dummy) ansatz that just prepares the state
     ansatz = QuantumCircuit(int(np.log2(len(state))))
     ansatz.initialize(state)
@@ -208,16 +210,19 @@ def eval_energy(state, operator):
     result = qiskit_eval_energy([0])
     return result
 
+
 def run_bulk_experiment(n_problems):
-    # generate n_problems problem instances and run the comparison for each of them
-    # results are stored in file fname
+    """generate n_problems problem instances and run the comparison for each of them. Results are stored in file fname."""
+
     for i in range(n_problems):
         print(f"Iteration #{a_seed}")
         problem_instance, ref_eigenvalue, ref_eigenstate, approx_eigenstate, approx_ratio, _variants = \
             store_results(fname, *run_comparison(a_seed=a_seed, plot=False))
 
+
 def evaluate_bulk_experiments():
-    # evaluate results stored in file fname
+    """evaluate results stored in file fname"""
+
     collect = np.array([20,40,60,80,100])-1
     results = load_results(fname)
     variants = None
@@ -362,11 +367,13 @@ def evaluate_bulk_experiments():
         plt.show()
 
 def run_single_experiment(a_seed=a_seed, store=False):
-    # run one comparison for one problem instance and plot the optimization progress
+    """Run one comparison for one problem instance and plot the optimization progress"""
+
     problem_instance, ref_eigenvalue, ref_eigenstate, approx_eigenstate, approx_ratio, variants = \
         run_comparison(a_seed=a_seed, plot=True)
     if store:
         store_results(fname, problem_instance, ref_eigenvalue, ref_eigenstate, approx_eigenstate, approx_ratio, variants)
+
 
 #run_single_experiment(store=False)
 #run_bulk_experiment(n_problems=25)
