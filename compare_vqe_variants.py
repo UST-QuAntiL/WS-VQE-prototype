@@ -2,10 +2,10 @@ from qiskit.quantum_info import SparsePauliOp
 import numpy as np
 from utils.helper_functions import generate_hermitian, inverse_power_method, get_gershgorin_extrema
 from utils.results_storage import store_results, load_results
-from qiskit_algorithms.minimum_eigensolvers import NumPyMinimumEigensolver # classical solver
-from qiskit_algorithms.minimum_eigensolvers import VQE # quantum solver
+from qiskit.algorithms.minimum_eigensolvers import NumPyMinimumEigensolver # classical solver
+from qiskit.algorithms.minimum_eigensolvers import VQE # quantum solver
 from qiskit.circuit.library import TwoLocal, EfficientSU2
-from qiskit_algorithms.optimizers import SPSA, ADAM, COBYLA
+from qiskit.algorithms.optimizers import SPSA, ADAM, COBYLA
 from qiskit.utils import algorithm_globals
 from qiskit_aer.primitives import Estimator as AerEstimator
 from qiskit import Aer, execute, QuantumCircuit
@@ -16,8 +16,8 @@ from approximate_encoding import approx_encode
 import json
 from matplotlib.gridspec import GridSpec
 
-problem_size = 2 # = num_qubits, matrix dimensions will be 2**problem_size
-sparsity=0.5 # probability of matrix entry being zero
+problem_size = 3 # = num_qubits, matrix dimensions will be 2**problem_size
+sparsity = 0.5 # probability of matrix entry being zero
 
 circuit_ansatz = EfficientSU2(num_qubits=problem_size, reps=2)
 # ansatz_part1 = EfficientSU2(num_qubits=problem_size, reps=1, skip_final_rotation_layer=True, parameter_prefix="1")
