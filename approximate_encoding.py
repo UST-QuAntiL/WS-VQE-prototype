@@ -26,9 +26,6 @@ def approx_encode(ansatz: QuantumCircuit, target_statevector, backend=Aer.get_ba
         print(obj_value)
         return obj_value
 
-    def store_intermediate_result(xk):
-        return#print(f"{xk}")
-
     # MinimizeWrapper stops estimating when fidelity is below threshold and stores optimization history to obtain the best parameterization observed during the optimization
     res = MinimizeWrapper(threshold=-0.95).minimize(fun=objective, x0=initial_param_values, method="COBYLA", callback=store_intermediate_result,
            options=({"rhobeg": np.pi/4, "maxiter": 50, "tol": np.pi/(2**6)}))

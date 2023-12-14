@@ -3,8 +3,8 @@ from qiskit.quantum_info import random_clifford
 from qiskit import QuantumCircuit
 
 def prepare_meas_circuits(circuit: QuantumCircuit, n_shadows):
-    # append n_shadows random clifford unitaries to the circuit
-    # returns collection of circuits along with collection of the unitaries used
+    """Append n_shadows random clifford unitaries to the circuit
+    returns collection of circuits along with collection of the unitaries used"""
 
     circuits = []
     unitaries = []
@@ -18,9 +18,11 @@ def prepare_meas_circuits(circuit: QuantumCircuit, n_shadows):
     return circuits, unitaries
 
 def estimate_fidelity_from_shadow(unitaries, measured_bitstrings, target_state):
-    # fidelity estimation with classical shadows implemented as per
-    # Approximate complex amplitude encoding algorithm and its application to data classification problems.
-    # Mitsuda et al. https://arxiv.org/abs/2211.13039 (page 2, equation (10))
+    """Fidelity estimation with classical shadows
+     
+    Implemented as per Approximate complex amplitude encoding algorithm and its application to data classification problems.
+    Mitsuda et al. https://arxiv.org/abs/2211.13039 (page 2, equation (10))"""
+
     measured_bitstrings = [np.matrix(b) for b in measured_bitstrings]
     unitaries = [np.matrix(u) for u in unitaries]
     target_state = np.matrix(target_state)
