@@ -1,6 +1,6 @@
 # WS-VQE-prototype
 
-This repository contains the prototypical implementation used to generate results presented in our publication **"Warm-Starting the VQE with Approximate Complex Amplitude Encoding"** [1]
+This repository contains the prototypical implementation used to generate results presented in our publication **"[Warm-Starting the VQE with Approximate Complex Amplitude Encoding](https://arxiv.org/abs/2402.17378)"** [1]
 
 The main contents of this repository are as follows.
 
@@ -15,7 +15,7 @@ The main contents of this repository are as follows.
 [results](results) contains the results generated with the implementation and presented in the publication. The evaluation is done with the appropriate function provided in [compare_vqe_variants.py](compare_vqe_variants.py).
 
 ### References
-[1] Truger, Felix, et al. "Warm-Starting the VQE with Approximate Complex Amplitude Encoding" (in preparation)
+[1] Truger, Felix, et al. "Warm-Starting the VQE with Approximate Complex Amplitude Encoding." arXiv:2402.17378 (2024)
 
 [2] Huang, Hsin-Yuan, Richard Kueng, and John Preskill. "Predicting many properties of a quantum system from very few measurements." Nature Physics 16.10 (2020): 1050-1057.
 
