@@ -1,6 +1,6 @@
 # WS-VQE-prototype
 
-This repository contains the prototypical implementation used to generate results presented in our publication **"[Warm-Starting the VQE with Approximate Complex Amplitude Encoding](https://arxiv.org/abs/2402.17378)"** [1]
+This repository contains the prototypical implementation used to generate results presented in our publication **"Warm-Starting the Variational Quantum Eigensolver with Approximate Complex Amplitude Encoding"** [1]
 
 The main contents of this repository are as follows.
 
@@ -15,7 +15,7 @@ The main contents of this repository are as follows.
 [results](results) contains the results generated with the implementation and presented in the publication. The evaluation is done with the appropriate function provided in [compare_vqe_variants.py](compare_vqe_variants.py).
 
 ### References
-[1] Truger, Felix, et al. "Warm-Starting the VQE with Approximate Complex Amplitude Encoding." arXiv:2402.17378 (2024)
+[1] Anonymous Authors. "Warm-Starting the Variational Quantum Eigensolver with Approximate Complex Amplitude Encoding." (2024)
 
 [2] Huang, Hsin-Yuan, Richard Kueng, and John Preskill. "Predicting many properties of a quantum system from very few measurements." Nature Physics 16.10 (2020): 1050-1057.
 
@@ -24,7 +24,3 @@ The main contents of this repository are as follows.
 ### Disclaimer of Warranty
 
 Unless required by applicable law or agreed to in writing, Licensor provides the Work (and each Contributor provides its Contributions) on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, including, without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness of using or redistributing the Work and assume any risks associated with Your exercise of permissions under this License.
-
-### Haftungsausschluss
-
-Dies ist ein Forschungsprototyp. Die Haftung für entgangenen Gewinn, Produktionsausfall, Betriebsunterbrechung, entgangene Nutzungen, Verlust von Daten und Informationen, Finanzierungsaufwendungen sowie sonstige Vermögens- und Folgeschäden ist, außer in Fällen von grober Fahrlässigkeit, Vorsatz und Personenschäden, ausgeschlossen.
