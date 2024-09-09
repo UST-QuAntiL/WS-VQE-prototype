@@ -37,6 +37,7 @@ algorithm_globals.random_seed = b_seed
 # store results to file/evaluate results from file
 fname = "results/ws-vqe_comparison-n3-aiter3-iter100-dynOptComp-sparse.5-uniform-init.json"
 
+#fname = "results/ws-vqe_comparison-n5-aiter12-aeiter100-iter200-newstepsize-16-24-64-ae-800shadows400shots-sparse.9-uniform-init.json"
 #optimizer = ADAM(maxiter=iterations)
 
 # default optimizer
